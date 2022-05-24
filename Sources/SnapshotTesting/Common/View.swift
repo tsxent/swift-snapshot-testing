@@ -162,9 +162,9 @@ public struct ViewImageConfig {
     return .init(safeArea: safeArea, size: size, traits: .iPhone12(orientation))
   }
 
-  public static let iPhone12ProMax = ViewImageConfig.iPhone12ProMax(.portrait)
+  public static let iPhone13ProMax = ViewImageConfig.iPhone13ProMax(.portrait)
 
-  public static func iPhone12ProMax(_ orientation: Orientation) -> ViewImageConfig {
+  public static func iPhone13ProMax(_ orientation: Orientation) -> ViewImageConfig {
     let safeArea: UIEdgeInsets
     let size: CGSize
     switch orientation {
@@ -175,7 +175,7 @@ public struct ViewImageConfig {
       safeArea = .init(top: 47, left: 0, bottom: 34, right: 0)
       size = .init(width: 428, height: 926)
     }
-    return .init(safeArea: safeArea, size: size, traits: .iPhone12ProMax(orientation))
+    return .init(safeArea: safeArea, size: size, traits: .iPhone13ProMax(orientation))
   }
 
   public static let iPadMini = ViewImageConfig.iPadMini(.landscape)
@@ -632,7 +632,7 @@ extension UITraitCollection {
     }
   }
 
-  public static func iPhone12ProMax(_ orientation: ViewImageConfig.Orientation)
+  public static func iPhone13ProMax(_ orientation: ViewImageConfig.Orientation)
   -> UITraitCollection {
     let base: [UITraitCollection] = [
       //    .init(displayGamut: .P3),
